@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './Button';
 import Widget from './Widget';
 
 class App extends React.Component {
@@ -6,7 +7,7 @@ class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            typed: '',
+            typed: 'Nothing!',
             services: 'Online Clothing!'
         };
     }
@@ -20,8 +21,11 @@ class App extends React.Component {
             <section id="wrapper">
                 <h1>{this.props.name}</h1>
                 <p>{this.state.services}</p>
+                <Button>Checkout</Button>
                 <Widget update={this.update.bind(this)} />
-                <pre>{this.state.typed}</pre>
+                <Widget update={this.update.bind(this)} />
+                <Widget update={this.update.bind(this)} />
+                <pre>You typed: {this.state.typed}</pre>
             </section>
         );
     }
