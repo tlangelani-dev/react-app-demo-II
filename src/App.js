@@ -1,4 +1,5 @@
 import React from 'react';
+import Widget from './Widget';
 
 class App extends React.Component {
 
@@ -19,7 +20,7 @@ class App extends React.Component {
             <section id="wrapper">
                 <h1>{this.props.name}</h1>
                 <p>{this.state.services}</p>
-                <input type="text" onChange={this.update.bind(this)} />
+                <Widget update={this.update.bind(this)} />
                 <pre>{this.state.typed}</pre>
             </section>
         );
