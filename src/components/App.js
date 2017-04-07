@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import Widget from './Widget';
+import './styles/App.css';
 
 class App extends React.Component {
 
